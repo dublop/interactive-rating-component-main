@@ -1,0 +1,136 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    --sm: 1.5rem;
+    --md: 2.4rem
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    font-size: var(--sm);
+    background-color: var(--very-dark-blue);
+}
+.inactive {
+    display: none;
+}
+.op-selected{
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+/*RATING CONTAINER*/
+.rating-container, .thankyou-container {
+    width: 340px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--light-grey);
+    background-color: var(--dark-blue);
+}
+.rating-container figure {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background-color:  hsl(217, 12%, 25%);
+    border-radius: 50%;
+}
+.title  {
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--md);
+    margin-top: 20px;
+}
+.description  {
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 2.4rem;
+}
+.rating-container ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px auto;
+    list-style: none;
+}
+.rating-container ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color:  hsl(217, 12%, 25%);
+    line-height: 4.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    
+} 
+.rating-container ul li:hover {
+    color: var(--white);
+    background-color: var(--orange);
+}
+.rating-container .op-selected{
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+.rating-container button {
+    width: 100%;
+    border: none;
+    padding: 20px 0;
+    font-size: var(--sm);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+/*THANK YOU CONTAINER*/
+.thankyou-container {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.thankyou-container figure{
+    margin: 20px 0;
+} 
+
+.selection {
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 400;
+    line-height: 3rem;
+    border-radius: 25px;
+    color: var(--orange);
+    background-color: hsl(217, 12%, 25%);
+}
+
+@media (min-width: 1400px) {
+    .rating-container, .thankyou-container {
+        width: 400px;
+        padding: 40px;
+        border-radius: 40px;
+    }
+}
